@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ka-bi</title>
+<meta name="viewport" content="width-device,initial-scale=1.0"></head>
+<style>
+
+/*
+body{
+
+
+background-image-height:40px;
+width:100vh;
+height:80vh;
+border:2px solid black;
+align-items: center;
+margin :250px;
+top:2px
+;
+}*/
+
+
+
+#title{
+        color:orange;
+        font-size:25px;
+        text-decoration-line: underline;
+      
+      }
+
+body{
+	
+	margin-left:2.5px;
+ 
+
+    }
+
+form {
+	align-items:center;
+  padding-left: 20px;
+     }
+
+#email{
+    padding :8px;
+		 border:1px solid green;
+		 margin:10px;
+		 width :40%;
+     border-radius: 20px;
+     cursor:text;
+}
+	#password{
+		 padding :8px;
+		 border:1px solid green;
+		 margin:10px;
+		 width :40%;
+     border-radius: 20px;
+     cursor:text;
+
+		  }
+
+#send{
+	border-color:orange;
+  width:150px;
+  height:40px;
+  font-size:20px; 
+  border-radius: 20cap;
+  padding:8px
+  }
+
+/*
+#title{
+color:orange;
+;text-align:center
+}
+ form css disabled by developer
+#container
+{
+color:orange;
+text-align:center;
+width:90vh;
+height:60vh;
+margin :20px;
+font-family:"gill san"
+}
+formhead
+{
+color:#456786;
+ width=10px;
+ height=30px;
+
+
+}
+#label1
+{
+color:#456786;
+line-height:4em;
+font-type:tahoma
+
+}
+
+<!--#label2
+{
+color:#456786;
+font-type:tahoma
+}-->
+ipu{
+color: #456786 
+}*/
+#expert{
+ margin-top: -35px;
+ margin-left: 150px;
+}
+
+</style>
+<body>
+
+  <span ><p id="title">X hospital</p></span>
+ 
+<i>Login Page</i><hr>
+<!--Form intitiation--><!--POST for sending sensitivie info-->
+<form  name="myForm" method="post" action="records.html" onsubmit="return Validate()">
+    <label style="color:green"> Welcome to Our Application</label><br><br><br><br>
+    <input  name="email" type="email" id="email"placeholder="Enter email" ><br>
+    <br><br>
+    <input  name="password" type="password" id="password"placeholder="Enter password" ><br>
+    <br><br>
+    <button id="send" type="submit">Send <img id="expert" src="image/Expert.jpg" width="200px" height="100px"></button>
+   
+</form><br>
+
+<script>
+  
+ // code will be here
+ //userName=document.myForm.email.value;
+ 
+ //privacy=document.myForm.password.value;// password =privacy
+
+ function Validate(){
+  var eformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//regular expression
+	var 
+  userName=document.myForm.email.value;
+ privacy=document.myForm.password.value;
+ if(userName==null||userName=="")
+ {alert("Name cannot not  empty ");return false;}
+ else if(privacy.length<6)
+ { alert("Password should be more than 6 character");return false ;}
+ else if(userName.match(eformat))
+ {
+ alert("Email is valid!");
+
+ return true;
+ }
+
+}
+
+</script>
+<!--Form termination-->
+<!--Show message in login is correct-->
+
+</body>
+</html>

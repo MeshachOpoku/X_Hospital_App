@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>X hospital</title>
+<meta charset="UTF-8">
+<meta name="view-port" content="width=device-width,inital-scale=0.5">  
+<style>
+	#container{
+		margin-left: 30px;
+	     margin-right:30px;
+		 border:130px 300% 700% 130px;
+	
+		
+	}
+	p{
+		font-size: x-large;
+	}
+
+
+	#colorT{
+		color:orange;
+		font-size:x-large ;
+		text-align:center;
+            text-decoration-line: underline;
+            font-size:50px;
+	}
+*{
+  font-size:20px;
+}
+
+#SR{
+width:40%;
+background-color:white;
+border:1px solid blue;
+ backface-visibility:visible;
+outline-offset: 0cap;
+
+
+}
+button{
+	background-color: orange;
+	border:2px solid orange;
+}
+</style>                                                                                                                                                            
+</head>
+<body>
+	<div id="container">
+	<p id="colorT">X hospital</p>
+	<i> Records Center </i><a href="#bb">&DownArrow;</a>
+	</p>	 
+    <hr>
+     <a href="index.html"><button id="">Home</button></a> 
+         <button id="AL" onclick="AddP()" >Register New Patient </button>
+		 <button id="AP" onclick="ViewPR()">View  Patient Records</button>
+	     <button id="AL" >Update Patient Records</button>
+         <button id="NL" onclick="NL()"> See Appointments</button><br><br> 
+
+<form method="POST" target="Ghana"> 
+      <hr> <input id="SR" type="text" placeholder="Search Patient Records" name="id">
+      <input type="submit" id="submit" value="search">
+</form>
+<p id="feed"></p>
+<br>
+<p id="heading"></p>
+<p id="bb"></p>	 
+<p id="Message"></p>
+
+<script>
+	AddP=()=>{
+		dispayPR=document.getElementById("feed")
+		
+		dispayPR.innerHTML=(
+			"Fill the records of patient below<br>"+ 
+			"<form name=pd target=# method=post onsubmit=RegisterP()>"+ 
+			"<input  name=id placeholder=Patient_id ><br><br>"+
+			"<input  name=name placeholder=Patient_Name ><br><br>"+
+			"<input  name=date placeholder=Current_Date><br><br>"+
+			"<input type=number  placeholder=Patient_Phone_Number ><br><br>"+
+			"<input type=text  placeholder=Other_information><br><br>"+
+			"<input type=submit  value=Register  ><br><br>"
+			+"</form >" 
+			
+			)
+	}
+
+	// Registeration breakdown
+	RegisterP=()=>{
+	pID=document.pd.id.value;
+    pName=document.pd.name.value;
+    cD=document.pd.date.value
+      if((pID==null||pID=="")&&(pName==null||pName=="")&&(cD==null||cD==""))
+{	alert("Space cannot be left empty.");
+	
+	}
+	     else if((pID!=null||pID!="")&&(pName!=null||pName!="")&&(cD!=null||cD==""))
+		 { alert("Records Saved!"); }
+	}
+
+	//let's go viewing ...
+    ViewPR=()=>{
+
+     pr=
+	 [{},
+     {pID: "P"  ,pName:"Baba",cD:"12/3/2023"},	
+     {pID: "H"  ,pName:"Manu",cD:"23/5/2023"},
+	 {pID: "L"  ,pName:"Obi",cD:"8/4/2020"},
+     {pID: "M"  ,pName:"Aare",cD:"8/4/2020"},
+	 {pID: "K"  ,pName:"Edu",cD:"8/4/2020"},
+	 {pID: "io"  ,pName:"Melina",cD:"8/4/2020"},
+	]
+    H=document.getElementById("heading");
+	H.innerHTML=("<strong><i>List of Patient Records</i></strong><hr><br><br>"+"Total Records"+pr.length+"<br>");
+
+    displayPR=document.getElementById("feed").innerHTML="";
+	submit =document.getElementById("AP");
+	//<br>"+"<br><br><br>Total  Records"+"<br>"+pr.length+1);
+
+
+    // onClick code
+
+  { displayPR=document.getElementById("feed");
+ var p=document.createElement("span");
+ 
+ var q=document.createElement("div");
+ 
+ for(let i=0;i<pr.length;i++)
+ { 
+	 
+	{p.innerHTML+=("<p style=background-color:lightblue>"+i+".Name:"+pr[i].pName+"<br>"+"Patient id:"+pr[i].pID+"<br>"+"First Date @ Hospital is:"+pr[i].cD+"<br><br><br><br>"+"\b");
+ }
+ displayPR.appendChild(p);
+   
+
+}
+  }
+
+
+
+  
+	}
+
+	for(let i=0;i<pr.length;i++)
+{
+
+	displayPR.innerHTML+=document.write("<p style=background-color:lightblue>"+i+".Name:"+pr[i].pName+"<br>"+"Patient id:"+pr[i].pID+"<br>"+"First Date @ Hospital is:"+pr[i].cD+"<br><br><br><br>"+"\b");	
+}
+
+
+		</script>
+		</div>
+	
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head><title>Ka-bi</title>
+<meta name="viewport" content="width-device,initial-scale=1.0"></head>
+<style>
+
+/*
+body{
+
+
+background-image-height:40px;
+width:100vh;
+height:80vh;
+border:2px solid black;
+align-items: center;
+margin :250px;
+top:2px
+;
+}*/
+#title{text-align:center;
+        font-family:"Tahoma" ;
+        font-weight: 1px;
+        color:orange;
+        rotate:-20deg;
+        padding:20px
+
+     
+      }
+
+body{
+	font-size:12px;
+	margin:10px;
+ 
+    }
+
+form {
+	align-items:center;
+  padding-left: 20px;
+     }
+
+label{font-style:sans-serif;
+     } 
+
+	input{
+		 padding :12px;
+		 border:1px solid green;
+		 margin:10px;
+		 width :30%;
+     border-radius: 20px;
+
+		  }
+
+#send{
+
+	border-color:orange;
+  width:150px;
+  height:40px;
+  outline-width: 0px;
+  color:black;
+  font-size:20px; 
+  border-radius: 20cap;
+  }
+
+/*
+#title{
+color:orange;
+;text-align:center
+}
+ form css disabled by developer
+#container
+{
+color:orange;
+text-align:center;
+width:90vh;
+height:60vh;
+margin :20px;
+font-family:"gill san"
+}
+formhead
+{
+color:#456786;
+ width=10px;
+ height=30px;
+
+
+}
+#label1
+{
+color:#456786;
+line-height:4em;
+font-type:tahoma
+
+}
+
+<!--#label2
+{
+color:#456786;
+font-type:tahoma
+}-->
+ipu{
+color: #456786 
+}*/
+</style>
+<body>
+
+<h1 id="title">X hospital<hr style="width:50px;color:green"><!--Horizontal line--></h1>
+<h1 id="container" >
+
+  <i style="margin-left: 20px;">Here is a sign-in page</i><hr>
+<!--Form intitiation--><!--POST for sending sensitivie info-->
+<form  name="myForm" method="post" action="login.html" onsubmit="return Validate()">
+  <p style="color:green"> Welcome to Our Application</p>
+  <input type="email" name="email" placeholder="Enter Email"><br><br>
+    <input  name="password" type="password" placeholder="Enter password" ><br>
+    <br><br>
+    <button id="send" type="submit">sign-in</button>
+</form>
+
+<script>
+  
+ // code will be here
+ //userName=document.myForm.email.value;
+ 
+ //privacy=document.myForm.password.value;// password =privacy
+
+ function Validate(){
+  var eformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//regular expression
+	userName=document.myForm.email.value;
+ privacy=document.myForm.password.value;
+ if(userName==null||userName=="")
+ {alert("Name cannot not  empty ");return false;}
+ else if(privacy.length<6)
+ { alert("Password should be more than 6 character");return false ;}
+ else if(userName.match(eformat))
+ {
+ alert("Email is valid!");
+ document.forms.email.focus();
+ return true;
+ }
+
+}
+
+</script>
+<!--Form termination-->
+<!--Show message in login is correct-->
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

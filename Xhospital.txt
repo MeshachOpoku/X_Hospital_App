@@ -1,0 +1,56 @@
+Hospital Management:
+
+Medical Doctor/Nurses :Name,email,phone number,email ,hospital location ,area of specialization
+Patient :Name,Age,medical data,time ,date,treatment,location,
+
+Name of project:X hospital
+Rational :
+Medical professional :login,register patient,keep patient records,prescribe treatment/medicine
+Patient:Make appointment,Call Medical professional,Chat them,See list of professional with their specialization
+
+
+//Design
+1.Home page:Medical Professional:allow medical professional register,keep patient records,see appointment.
+           Patient:read Display Hospital info,read medical professional description ,make appointment with specific doctor.
+
+
+
+medical professional class
+Name    string 
+email string
+phone number numbers
+email  string
+hospital location string
+area of specialization   string
+id       string
+password  string
+
+Keep Patient Records class
+id  string
+patient data string
+treatment record string
+
+
+See appointment class
+Check profile to see list of appointment and  approve at least 50;
+method :approve some appointment
+
+------------------------------------------------------------------------------
+Patient class
+Hospital and Professionals description or profile
+read()
+
+
+
+Appointment Class:
+condition string
+date  string
+name   string
+age    string
+time    string
+
+.method==>appoint()
+
+
+
+
